@@ -1,0 +1,12 @@
+{% extends 'reserve/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Book Room: {{ room.room_number }} - Type: {{ room.type }}</h3>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-primary my-4" type="submit">Reserve</button>
+  </form>
+{% endblock %}

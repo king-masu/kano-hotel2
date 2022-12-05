@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'reserve/css/materialize.min.css' %}" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href='{% static "reserve/css/style.css" %}'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class="blue lighten-1">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Kano Hotel</a>
+            <a href="#" class="button-collapse" data-activates="mobile-nav"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/" style="font-size: 18px">Home</a></li>
+                <li><a href="/about-us" style="font-size: 18px">About Us</a></li>
+                <li><a href="#" style="font-size: 18px" class="dropdown-button" data-activates='services'>Service</a></li>
+                <li><a href="/contact-us" style="font-size: 18px">Contact Us</a></li>
+                <li><a href="#" style="font-size: 18px" class="btn white blue-text waves-effect waves-teal">RESERVE</a></li>
+            </ul>
+            <ul id="mobile-nav" class="side-nav">
+              <li><a href="/" class="btn white blue-text text-lighten-2" style="font-size: 18px">Home</a></li>
+              <li><a href="/about-us" class="btn white blue-text text-lighten-2" style="font-size: 18px">About Us</a></li>
+              <li><a href="#" style="font-size: 18px" class="dropdown-button" data-activates='services-m'>Services</a></li>
+              <li><a href="/contact-us" class="btn white blue-text text-lighten-2" style="font-size: 18px">Contact Us</a></li>
+              <li><a href="#" style="font-size: 18px" class="btn blue white-text waves-effect waves-teal">REGISTER</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <ul id="services" class="dropdown-content center">
+        <li><a class="blue-text text-lighten-1" href="/materials" style="font-size: 18px">Building Materials</a></li>      
+        <li><a class="blue-text text-lighten-1" href="/estate" style="font-size: 18px">Estate</a></li>
+        <li><a class="blue-text text-lighten-1" href="/artisans" style="font-size: 18px">Artisans</a></li>
+      </ul>
+      <!-- MOBILE DORPDOWN -->
+      <ul id="services-m" class="dropdown-content center">
+        <li><a class="blue-text text-lighten-1" href="/materials" style="font-size: 18px">Building Materials</a></li>      
+        <li><a class="blue-text text-lighten-1" href="/estate" style="font-size: 18px">Estate</a></li>
+        <li><a class="blue-text text-lighten-1" href="/artisans" style="font-size: 18px">Artisans</a></li>
+      </ul>
+    {% block content %}
+    {% endblock %}
+
+    <footer class="page-footer blue lighten-1">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">About Us</h5>
+              <p class="grey-text text-lighten-4">
+                With a wide range of services catered to both business and leisure travelers, Kano Hotel makes sure you get the best out of your stay.
+              </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#" style="font-size: 18px">Museum in Kano</a></li>      
+                <li><a class="grey-text text-lighten-3" href="#" style="font-size: 18px">Events in Kano</a></li>
+                <!-- <li><a class="grey-text text-lighten-3" href="#" style="font-size: 18px">Artisans</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container" style="font-weight:500; font-size:22px">
+            Copyright 2020
+            <a href="#" class="grey-text text-lighten-4 right">Kano Hotel</a>
+          </div>
+        </div>
+      </footer>
+
+    <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="{% static 'home/js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'home/js/materialize.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'home/js/test.js' %}"></script>
+  <script>
+    $(document).ready(function () {
+      $('.dropdown-button').dropdown({
+        constrainWidth: false,
+        hover: true,
+        belowOrigin: true,
+        alignment: 'left'
+      });
+
+      // JAVASCRIPT START HERE //
+      //Activate Slider
+      $('.slider').slider({
+        height: '70vh',
+        indicators: false,
+        interval: 3000,
+      });
+      $('.button-collapse').sideNav();
+      $('select').material_select();
+      $('.dropdown-button')
+      
+      
+    });
+  </script>
+</body>

@@ -1,0 +1,74 @@
+{% extends 'reserve/base.html' %}
+{% load static %}
+
+<!-- <link rel="stylesheet" href="{% static 'css/blog.css' %}"> -->
+
+{% block content %}
+    <!-- <h3>hi</h3>
+    {% for room in available_rooms %}
+    <h3>Room Number{{ room.room_number }} - Type {{ room.room_type }} </h3>
+    <h4>Availability: {% if room.availability == True %}Available {% else %} Not Available {% endif %} </h4>
+    <img src="{{ room.room_picture.url }}" class="responsive-img" style='height:250px; width:300px'>
+    WORKING -->
+    <!-- <button>Book Room</button>
+    <a class="blue-text text-lighten-1" href="{% url 'reserve:reserve_room' room.pk %}">Book Room</a>
+     {% endfor %} -->
+
+ <!--  -->
+        <h4 class="center" style="padding: 50px 0;">Available Rooms:</h4>
+
+        <div>
+          <div class="row">
+            {% for room in available_rooms %}
+            <div class="col s12 m4 l3">
+          <div class="card center">
+            <div class="card-image"> 
+              <img src="{{ room.room_picture.url }}" class="responsive-img" style='height:250px; width:300px'>
+              <span class="card-title blue" style='padding:0'> Standard Room </span>
+            </div>
+           <div class="card-content" style='padding: 10px'>
+              <div style='padding: 15px'>
+                  <h6 class="card-title">
+                <a class="blue-text text-lighten-1" href=" url 'estate:detail_view' property.state property.pk ">N40,000</a></h6>
+                  <!-- <h6>  property.area}}, property.state}} </h6> -->
+                  <h6>Room Number: {{ room.room_number }}</h6>
+                  <button class="btn blue lighten-2" style="width:100%"><a class="white-text" href="{% url 'reserve:reserve_room' room.pk %}">Reserve Room</a></button>
+
+                  <!-- <p class="grey-text"> property.full_desc}}</p> -->
+              </div>
+                
+              
+        
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <h4>No such property available yet, try a different search</h4>
+        {% endfor %}
+        
+        </div>
+        </div>
+<!--  -->
+
+
+
+{% endblock %}    
+</body>
+</html>
+
+
+<!-- AGENT -->
+    <!-- <div class="row"> -->
+        <!-- <div class="col s12 m4 l3">
+        <div class="card-panel small">
+          <div class="card-image"> 
+            <img src="{{ room.room_picture.url }}" class="responsive-img" style='height:250px; width:300px'>
+          </div>
+         <div class="card-content">
+            <h5 class="card-title">
+            <a class="blue-text text-lighten-2" href=" url 'artisans:detail_view' artisan.state artisan.slug artisan.pk "> artisan.company}}</a></h5>
+            <h6><i class="material-icons blue-text text-lighten-2">place</i> artisan.address}},  artisan.state}} </h6>
+            <h6 class="chip"> artisan.services}}</h6>
+          </div>
+        </div>
+      </div> -->

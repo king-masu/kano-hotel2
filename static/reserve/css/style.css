@@ -1,0 +1,36 @@
+/* html {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+.smalls {
+  width: 100px !important;
+  display: inline-block;
+  color: red !important;  
+}
+.slideheader {
+  padding: 12px;
+  /* max-width: 500px; */
+}
+.no-margin {
+  margin: 0;
+}
+.padded {
+  padding: 10px;
+  /* max-width: 400px; */
+}
+.margin {
+  margin: 5px 0;
+}
+.box-pad {
+  padding: 20px;
+}
+
+
+.mid-text {
+  font-size: 20px;
+}
+.rooms {
+  font-size: 2px;
+}
+/* .slides img {
+  filter: blur(2px)
+} */
