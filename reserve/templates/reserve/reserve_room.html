@@ -3,10 +3,13 @@
 
 {% block content %}
 
-<h3>Book Room: {{ room.room_number }} - Type: {{ room.type }}</h3>
-<form method="post" enctype="multipart/form-data">
-        {{ form }}
-        {% csrf_token %}
-        <button class="btn btn-primary my-4" type="submit">Reserve</button>
+<div class="row center" style="padding: 20px;">
+  <h3>Book Room: {{ room.room_number }} - Type: {{ room.type }}</h3>
+  <form method="post" enctype="multipart/form-data">
+    {{ form }}
+    {% csrf_token %}
+    <button class="btn btn-primary my-4" type="submit">Reserve</button>
   </form>
+</div>
+
 {% endblock %}

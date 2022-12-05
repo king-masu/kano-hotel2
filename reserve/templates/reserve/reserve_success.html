@@ -4,7 +4,15 @@
 <!-- <link rel="stylesheet" href="{% static 'css/blog.css' %}"> -->
 
 {% block content %}
-    <h3>You have successfully made your reservation: Reservation code is: {{ reservation_code }}, kindly take a screenshot of it to save and show at our fronte desk.</h3>
+<div class="row center">
+    <div style="padding: 40px;">
+        <h5>You have successfully made your reservation: Reservation code is: <br> <h3>{{ reservation_code }}  </h3>
+            Kindly take a screenshot of it to save and show at our front desk.</h5>
+
+            <button class="btn blue lighten-2" style="width:100%"><a class="white-text" href="{% url 'reserve:available_rooms' %}">Reserve Another Room</a></button>
+
+    </div>
+</div>    
 {% endblock %}    
 </body>
 </html>
