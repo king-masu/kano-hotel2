@@ -5,8 +5,8 @@
 
 <h3>Book Room: {{ room.room_number }} - Type: {{ room.type }}</h3>
 <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
         {{ form }}
+        {% csrf_token %}
         <button class="btn btn-primary my-4" type="submit">Reserve</button>
   </form>
 {% endblock %}
