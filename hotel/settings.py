@@ -127,6 +127,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles')
 ]
 
+if not DEBUG:
+CSRF_TRUSTED_ORIGINS = [‘https://web-production-8020.up.railway.app 20’]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
